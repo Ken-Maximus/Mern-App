@@ -26,7 +26,7 @@ const useStyles = makeStyles(theme => ({
     color: theme.palette.text.secondary
   },
   media: {
-    minHeight: 650
+    minHeight: 600
   },
   credit: {
     padding: 10,
