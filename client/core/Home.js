@@ -16,7 +16,7 @@ const useStyles = makeStyles(theme => ({
     margin: 30,
   },
   card: {
-    maxWidth: 1000,
+    maxWidth: 1300,
     margin: 'auto',
     marginTop: theme.spacing(5),
     marginBottom: theme.spacing(5)
@@ -26,7 +26,7 @@ const useStyles = makeStyles(theme => ({
     color: theme.palette.text.secondary
   },
   media: {
-    minHeight: 500
+    minHeight: 650
   },
   credit: {
     padding: 10,
