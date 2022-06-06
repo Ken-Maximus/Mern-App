@@ -16,7 +16,7 @@ const isActive = (history, path) => {
     return {color: '#ffffff'}
 }
 const Menu = withRouter(({history}) => (
-  <AppBar position="static">
+  <AppBar position="static" >
     <Toolbar>
       <Typography variant="h6" color="inherit">
         Marcus Social Media
@@ -27,19 +27,20 @@ const Menu = withRouter(({history}) => (
         </IconButton>
       </Link>
       
-      {
+     {
         !auth.isAuthenticated() && (<span>
           <Link to="/signup">
-            <Button style={isActive(history, "/signup") }>Sign up
+             <Button style={isActive(history, "/signup") }>Sign up
             </Button>
           </Link>
+
           <Link to="/signin">
             <Button style={isActive(history, "/signin")}>Sign In
-            
-            </Button>
+             </Button>
           </Link>
         </span>)
       }
+      
       {
         auth.isAuthenticated() && (<span>
           <Link to={"/user/" + auth.isAuthenticated().user._id}>
