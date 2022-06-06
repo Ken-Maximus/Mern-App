@@ -60,6 +60,8 @@ export default function Signup (){
       name: values.name || undefined,
       email: values.email || undefined,
       password: values.password || undefined
+    
+
     }
     create(user).then((data) => {
       if (data.error) {
@@ -79,6 +81,8 @@ export default function Signup (){
           <TextField id="name" label="Name" className={classes.textField} value={values.name} onChange={handleChange('name')} margin="normal"/><br/>
           <TextField id="email" type="email" label="Email" className={classes.textField} value={values.email} onChange={handleChange('email')} margin="normal"/><br/>
           <TextField id="password" type="password" label="Password" className={classes.textField} value={values.password} onChange={handleChange('password')} margin="normal"/>
+          <TextField id="password" type=" password" label="Confirm Password" className={classes.textField} value={values.password} onChange={handleChange('password')} margin="normal"/>
+
           <br/> {
             values.error && (<Typography component="p" color="error">
               <Icon color="error" className={classes.error}>error</Icon>
