@@ -19,7 +19,7 @@ const Menu = withRouter(({history}) => (
   <AppBar position="static" >
     <Toolbar>
       <Typography variant="h6" color="inherit">
-        Marcus Social Media
+        MARCUS SOCIAL MEDIA
       </Typography>
       <Link to="/">
         <IconButton aria-label="Home" style={isActive(history, "/")}>
