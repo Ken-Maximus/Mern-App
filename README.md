@@ -4,4 +4,4 @@ How to run the application
 
 2. To run the application for development, run ```  npm run development  ``` 
 
-3. Open [localhost:3000](http://localhost:3000/) in the browser
+3. Open [localhost:3000](http://localhost:3000/) on your browser
