@@ -7,7 +7,7 @@ import HomeIcon from '@material-ui/icons/Home'
 import Button from '@material-ui/core/Button'
 import auth from './../auth/auth-helper'
 import {Link, withRouter} from 'react-router-dom'
-import { FormatAlignJustify } from '@material-ui/icons'
+
 
 
 const isActive = (history, path) => {
@@ -17,13 +17,13 @@ const isActive = (history, path) => {
     return {color: '#ffffff'}
 }
 const Menu = withRouter(({history}) => (
-  <AppBar position="static" >
-    <Toolbar >
+  <AppBar position='static'>
+    <Toolbar>
       <Typography variant="h6" color="inherit">
         MARCUS SOCIAL MEDIA
       </Typography>
       <Link to="/">
-        <IconButton  aria-label="Home" style={isActive(history, "/")}>
+        <IconButton aria-label="Home" style={isActive(history, "/")}>
           <HomeIcon/>
         </IconButton>
       </Link>
@@ -31,7 +31,7 @@ const Menu = withRouter(({history}) => (
      {
         !auth.isAuthenticated() && (<span>
           <Link to="/signup">
-            <Button style={isActive(history, "/signup") }>Sign up
+            <Button style={isActive(history, "/signup")}>Sign up
               </Button>
            </Link>
             
