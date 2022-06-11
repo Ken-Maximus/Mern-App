@@ -7,8 +7,8 @@ import HomeIcon from '@material-ui/icons/Home'
 import Button from '@material-ui/core/Button'
 import auth from './../auth/auth-helper'
 import {Link, withRouter} from 'react-router-dom'
-
-
+import { Box } from '@material-ui/core';
+import { Grid } from '@material-ui/core';
 
 const isActive = (history, path) => {
   if (history.location.pathname == path)
@@ -19,16 +19,37 @@ const isActive = (history, path) => {
 const Menu = withRouter(({history}) => (
   <AppBar position='static'>
     <Toolbar>
-      <Typography variant="h6" color="inherit">
-        MARCUS SOCIAL MEDIA
-      </Typography>
-      <Link to="/">
-        <IconButton aria-label="Home" style={isActive(history, "/")}>
-          <HomeIcon/>
-        </IconButton>
-      </Link>
-      
-     {
+      <Grid container>
+        <Grid item md={3}>
+        <Typography variant="h6" color="inherit">
+          MARCUS SOCIAL MEDIA
+        </Typography>
+        </Grid>
+        <Grid item md={3}>
+          <Box
+              display="flex"
+              direction="column"
+              justifyContent="right"
+              alignItems="right"
+              spacing={2}
+            >
+              <Link to="/">
+                <IconButton aria-label="Home" style={isActive(history, "/")}>
+                  <HomeIcon/>
+                </IconButton>
+              </Link>
+
+            </Box>
+        </Grid>
+
+        <Grid item md={6}>
+            <Box
+             display="flex"
+             direction="column"
+             justifyContent="right"
+             alignItems="right"
+            >
+{
         !auth.isAuthenticated() && (<span>
           <Link to="/signup">
             <Button style={isActive(history, "/signup")}>Sign up
@@ -53,6 +74,16 @@ const Menu = withRouter(({history}) => (
             }}>Sign out</Button>
         </span>)
       }
+
+          </Box>
+        </Grid>
+      </Grid>
+
+      
+
+      
+      
+     
     </Toolbar>
   </AppBar>
 ))
